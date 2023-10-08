@@ -1,0 +1,38 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#Head {
+    width: 100vw;
+    background-color: black;
+    height: 4rem;
+    color: white;
+    position: sticky;
+}
+
+.sideIcon,
+header,
+.mainIcon {
+    display: inline-block;
+}
+.mainIcon{
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+.sideIcon{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+header{
+    padding-left: 2rem;
+}
+.login{
+    border: 0px;
+    border-radius: 10px;
+   border-top-left-radius: 25px;
+    background-color: gray;
+    padding-left: 10px;
+    padding-right: 10px;
+}

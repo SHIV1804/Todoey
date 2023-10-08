@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+    <div class="container-fluid" id="mainBox">
+
+        <div class="nameOfToDo">
+            <div class="inputNameOftask">
+                <h2>Enter name of To Do List</h2>
+                <form action="/submit" method="post">
+                    <input type="text" name="headingOfTask" placeholder="Enter here" id="toDo-taskName">
+                </form>
+            </div>
+            <div class="listOfTaskName">
+                <ul style="list-style-type: none; padding: 0px;">
+                    <li>
+                        <a href="#"><%= locals.name %></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <% if(locals.name) {%>
+        <div class="toDoList-box">
+            
+            <h2><%= name %></h2>
+                
+            <form action="/Enter" method="patch">
+            <input type="text" name="nameOfTask" placeholder="Enter task" id="toDo-task">
+            </form>
+            <div class="listOfTask">
+                <ul style="list-style-type: none; padding: 0px;">
+                    <li>
+                        <% if(locals.task){ %>
+                        <input type="checkbox" onclick="Enter()"> <%= task  %> 
+                       
+                    <% } %>
+                       di
+                    </li>
+                </ul>
+            </div>
+        </div>
+<% } %>
+<%- include('partials/footer.ejs') %>
